@@ -25,6 +25,13 @@ public class MotorInsurance {
         this.firstYearPremium = firstYearPremium;
     }
     
+    @Override
+    public String toString() {
+    	
+    	return "Motor Insurance Name: "+motorInsuranceName+"\nPersonal Protection Plan: "+
+    	personalProtectPlan+"\nFirst Year Premium: "+firstYearPremium;
+    }
+    
     
 
 }
