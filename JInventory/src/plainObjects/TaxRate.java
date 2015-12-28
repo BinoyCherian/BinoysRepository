@@ -18,6 +18,10 @@ public class TaxRate {
         this.taxRate = taxRate;
     }
     
-    
+    @Override
+    public String toString() {
+    	
+    	return "State: "+state+"\nTaxRate: "+taxRate;
+    }
 
 }
