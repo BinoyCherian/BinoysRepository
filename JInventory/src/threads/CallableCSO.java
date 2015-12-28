@@ -1,21 +1,22 @@
 package threads;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Callable;
 
 import core.InventoryImpl;
 import core.InventoryInterface;
 import plainObjects.CarStandingOrder;
 
-public class CallableCSO implements Callable<ArrayList<CarStandingOrder>>{
+public class CallableCSO implements Callable<List<CarStandingOrder>>{
 
 	InventoryInterface loader=new InventoryImpl();
-	ArrayList<CarStandingOrder> carStandingOrder=new ArrayList<>();
+	List<CarStandingOrder> carStandingOrder=new ArrayList<>();
 	
 	@Override
-	public ArrayList<CarStandingOrder> call() throws Exception {
+	public List<CarStandingOrder> call() throws Exception {
 		
-		carStandingOrder=(ArrayList<CarStandingOrder>) loader.readCarStandingOrderFromCSV();
+		carStandingOrder= loader.readCarStandingOrderFromCSV();
 		return carStandingOrder;
 	}
 
