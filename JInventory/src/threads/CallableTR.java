@@ -1,19 +1,20 @@
 package threads;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Callable;
 
 import core.InventoryImpl;
 import core.InventoryInterface;
 import plainObjects.TaxRate;
 
-public class CallableTR implements Callable<ArrayList<TaxRate>>{
+public class CallableTR implements Callable<List<TaxRate>>{
 
     @Override
-    public ArrayList<TaxRate> call() throws Exception {
+    public List<TaxRate> call() throws Exception {
         InventoryInterface loader=new InventoryImpl();
         
-        return (ArrayList<TaxRate>) loader.readTaxRateFromCSV();
+        return loader.readTaxRateFromCSV();
     }
 
 }
