@@ -138,7 +138,7 @@ public class InventoryImpl implements InventoryInterface {
 		finally {
 			try {
 
-				System.out.println("Car Inventory Map Size: " + carInventoryMap.size());
+//				System.out.println("Car Inventory Map Size: " + carInventoryMap.size());
 				if ((br != null) || (br == null))
 					br.close();
 			} catch (IOException e) {
@@ -244,7 +244,7 @@ public class InventoryImpl implements InventoryInterface {
 					accessoryMap.put(accessoryObject.getKey(), accessoryObject);
 
 				} else if (firstLine) {
-					System.out.println("Ignoring firstLine");
+//					System.out.println("Ignoring firstLine");
 				}
 
 			}
@@ -259,7 +259,7 @@ public class InventoryImpl implements InventoryInterface {
 		finally {
 			try {
 
-				System.out.println("Accessory Map Size: " + accessoryMap.size());
+//				System.out.println("Accessory Map Size: " + accessoryMap.size());
 
 				if ((br != null) || (br == null))
 					br.close();
@@ -418,7 +418,7 @@ public class InventoryImpl implements InventoryInterface {
 
 		finally {
 			try {
-				System.out.println("Car Standing Orders Size: " + orders.size());
+//				System.out.println("Car Standing Orders Size: " + orders.size());
 				if ((br != null) || (br == null))
 					br.close();
 			} catch (IOException e) {
@@ -498,7 +498,7 @@ public class InventoryImpl implements InventoryInterface {
 		}
 
 		finally {
-			System.out.println("Motor Insurance Map Size: " + motorInsurance.size());
+//			System.out.println("Motor Insurance Map Size: " + motorInsurance.size());
 			if ((br == null) || (br != null)) {
 				try {
 					br.close();
@@ -568,7 +568,7 @@ public class InventoryImpl implements InventoryInterface {
 
 		finally {
 
-			System.out.println("Tax Rate Map Size: " + taxRateList.size());
+//			System.out.println("Tax Rate Map Size: " + taxRateList.size());
 			if ((br == null) || (br != null)) {
 				try {
 					br.close();
