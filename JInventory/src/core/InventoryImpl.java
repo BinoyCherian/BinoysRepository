@@ -1,9 +1,11 @@
 package core;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -286,12 +288,15 @@ public class InventoryImpl implements InventoryInterface {
 		String cvsSplitBy = ",";
 		boolean firstLine = false;
 		CarStandingOrder orderObject = null;
-
+		
+		URL urlFile=getClass().getClassLoader().getResource("resource/carStandingOrders.csv");
+		System.out.println("URL: "+urlFile.getPath());
+		
 		
 		try {
-			
+			File file=new File(urlFile.getPath());
 			orders=new ArrayList<>();
-			br = new BufferedReader(new FileReader(csvFile));
+			br = new BufferedReader(new FileReader(file));
 			
 			while ((line = br.readLine()) != null) {
 				
