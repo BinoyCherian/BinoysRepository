@@ -31,55 +31,55 @@ public class CarStandingOrder {
 	public String getCustomerName() {
 		return customerName;
 	}
-	public static void setCustomerName(String customerName) {
+	public void setCustomerName(String customerName) {
 		CarStandingOrder.customerName = customerName;
 	}
 	public String getRegion() {
 		return region;
 	}
-	public static void setRegion(String region) {
+	public void setRegion(String region) {
 		CarStandingOrder.region = region;
 	}
 	public String getVendor() {
 		return vendor;
 	}
-	public static void setVendor(String vendor) {
+	public void setVendor(String vendor) {
 		CarStandingOrder.vendor = vendor;
 	}
 	public String getModel() {
 		return model;
 	}
-	public static void setModel(String model) {
+	public void setModel(String model) {
 		CarStandingOrder.model = model;
 	}
 	public String getVariant() {
 		return variant;
 	}
-	public static void setVariant(String variant) {
+	public void setVariant(String variant) {
 		CarStandingOrder.variant = variant;
 	}
 	public String getColor() {
 		return color;
 	}
-	public static void setColor(String color) {
+	public void setColor(String color) {
 		CarStandingOrder.color = color;
 	}
 	public ArrayList<String> getAccessories() {
 		return accessories;
 	}
-	public static void setAccessories(ArrayList<String> accessories) {
+	public void setAccessories(ArrayList<String> accessories) {
 		CarStandingOrder.accessories = accessories;
 	}
 	public String getMotorInsurance() {
 		return motorInsurance;
 	}
-	public static void setMotorInsurance(String motorInsurance) {
+	public void setMotorInsurance(String motorInsurance) {
 		CarStandingOrder.motorInsurance = motorInsurance;
 	}
 	public String getPersonalProtectPlan() {
 		return personalProtectPlan;
 	}
-	public static void setPersonalProtectPlan(String personalProtectPlan) {
+	public void setPersonalProtectPlan(String personalProtectPlan) {
 		CarStandingOrder.personalProtectPlan = personalProtectPlan;
 	}
 	
