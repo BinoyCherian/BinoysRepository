@@ -1,6 +1,5 @@
 package core;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -32,6 +31,13 @@ public class MapBuilderUsingExecutor {
 			cso = processing.getFutureCSOmap().get();
 			mi=processing.getFutureMImap().get();
 			ti=processing.getFutureTRmap().get();
+			
+			
+			System.out.println("ai: "+ai.size());
+			System.out.println("ci: "+ci.size());
+			System.out.println("cso: "+cso.size());
+			System.out.println("mi: "+mi.size());
+			System.out.println("ti: "+ti.size());
 
 		} catch (InterruptedException e) {
 
