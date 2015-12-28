@@ -1,23 +1,26 @@
 package core;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import exceptions.AccessoryOverException;
-import exceptions.CarNotFoundException;
 import exceptions.CarOverException;
 import plainObjects.AccessoryInventory;
 import plainObjects.CarInventory;
 import plainObjects.CarStandingOrder;
+import plainObjects.MotorInsurance;
+import plainObjects.TaxRate;
 
 public class MapBuilderUsingExecutor {
 
 	static Map<String, AccessoryInventory> ai;
 	static Map<String, CarInventory> ci;
-	static ArrayList<CarStandingOrder> cso;
-	static boolean lock1 = false;
-	static boolean lock2 = false;
+	static List<CarStandingOrder> cso;
+	static List<MotorInsurance> mi;
+	static List<TaxRate> ti;
+
 
 	static {
 		ProcessingThreads processing = new ProcessingThreads();
@@ -27,6 +30,8 @@ public class MapBuilderUsingExecutor {
 			ai = processing.getFutureAImap().get();
 			ci = processing.getFutureCImap().get();
 			cso = processing.getFutureCSOmap().get();
+			mi=processing.getFutureMImap().get();
+			ti=processing.getFutureTRmap().get();
 
 		} catch (InterruptedException e) {
 
@@ -104,7 +109,7 @@ public class MapBuilderUsingExecutor {
 		return ci;
 	}
 
-	public static ArrayList<CarStandingOrder> getCso() {
+	public static List<CarStandingOrder> getCso() {
 		return cso;
 	}
 }
