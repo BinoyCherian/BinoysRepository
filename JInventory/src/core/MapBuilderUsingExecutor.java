@@ -235,17 +235,26 @@ public class MapBuilderUsingExecutor {
 
 
 		boolean carAvailable = false;
-		if (ci.get(key) == null) {
-			carAvailable = false;
+//		if (ci.get(key) == null) {
+//			carAvailable = false;
+//		}
+//
+//		else {
+//			carAvailable = true;
+//
+//		}
+//
+//		return carAvailable;
+		
+		if(!ci.get(key).equals(null))
+		{
+			carAvailable=true;
 		}
-
-		else {
-			carAvailable = true;
-
-		}
-
+		
+		
 		return carAvailable;
-
+		
+		
 	}
 
 
