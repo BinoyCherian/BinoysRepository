@@ -4,50 +4,50 @@ package plainObjects;
 
 public class CarInventory {
 	
-	private static String vendor;
-	private static String model;
-	private static String variant;
-	private static String color;
-	private static long basePrice;
-	private static int quantityAvailable;
+	private String vendor;
+	private String model;
+	private   String variant;
+	private   String color;
+	private   long basePrice;
+	private   int quantityAvailable;
 	
 	//getters and setters
 	
 	public  String getVendor() {
 		return vendor;
 	}
-	public static void setVendor(String vendor) {
-		CarInventory.vendor = vendor;
+	public void setVendor(String vendor) {
+		this.vendor = vendor;
 	}
 	public String getModel() {
 		return model;
 	}
-	public static void setModel(String model) {
-		CarInventory.model = model;
+	public void setModel(String model) {
+		this.model = model;
 	}
 	public String getVariant() {
 		return variant;
 	}
-	public static void setVariant(String variant) {
-		CarInventory.variant = variant;
+	public void setVariant(String variant) {
+		this.variant = variant;
 	}
 	public String getColor() {
 		return color;
 	}
-	public static void setColor(String color) {
-		CarInventory.color = color;
+	public void setColor(String color) {
+		this.color = color;
 	}
 	public long getBasePrice() {
 		return basePrice;
 	}
-	public static void setBasePrice(long basePrice) {
-		CarInventory.basePrice = basePrice;
+	public void setBasePrice(long basePrice) {
+		this.basePrice = basePrice;
 	}
 	public int getQuantityAvailable() {
 		return quantityAvailable;
 	}
-	public static void setQuantityAvailable(int quantityAvailable) {
-		CarInventory.quantityAvailable = quantityAvailable;
+	public void setQuantityAvailable(int quantityAvailable) {
+		this.quantityAvailable = quantityAvailable;
 	}
 	
 	public String getKey()

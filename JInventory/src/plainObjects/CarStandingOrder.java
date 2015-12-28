@@ -11,15 +11,15 @@ import java.util.ArrayList;
  */
 public class CarStandingOrder {
 	
-	private static String customerName;
-	private static String region;
-	private static  String vendor;
-	private static String model;
-	private static String variant;
-	private static String color;
-	private static ArrayList<String> accessories;
-	private static String motorInsurance;
-	private static String personalProtectPlan;
+	private String customerName;
+	private String region;
+	private String vendor;
+	private String model;
+	private String variant;
+	private String color;
+	private ArrayList<String> accessories;
+	private String motorInsurance;
+	private String personalProtectPlan;
 	
 	
 	
@@ -32,55 +32,55 @@ public class CarStandingOrder {
 		return customerName;
 	}
 	public void setCustomerName(String customerName) {
-		CarStandingOrder.customerName = customerName;
+		this.customerName = customerName;
 	}
 	public String getRegion() {
 		return region;
 	}
 	public void setRegion(String region) {
-		CarStandingOrder.region = region;
+		this.region = region;
 	}
 	public String getVendor() {
 		return vendor;
 	}
 	public void setVendor(String vendor) {
-		CarStandingOrder.vendor = vendor;
+		this.vendor = vendor;
 	}
 	public String getModel() {
 		return model;
 	}
 	public void setModel(String model) {
-		CarStandingOrder.model = model;
+		this.model = model;
 	}
 	public String getVariant() {
 		return variant;
 	}
 	public void setVariant(String variant) {
-		CarStandingOrder.variant = variant;
+		this.variant = variant;
 	}
 	public String getColor() {
 		return color;
 	}
 	public void setColor(String color) {
-		CarStandingOrder.color = color;
+		this.color = color;
 	}
 	public ArrayList<String> getAccessories() {
 		return accessories;
 	}
 	public void setAccessories(ArrayList<String> accessories) {
-		CarStandingOrder.accessories = accessories;
+		this.accessories = accessories;
 	}
 	public String getMotorInsurance() {
 		return motorInsurance;
 	}
 	public void setMotorInsurance(String motorInsurance) {
-		CarStandingOrder.motorInsurance = motorInsurance;
+		this.motorInsurance = motorInsurance;
 	}
 	public String getPersonalProtectPlan() {
 		return personalProtectPlan;
 	}
 	public void setPersonalProtectPlan(String personalProtectPlan) {
-		CarStandingOrder.personalProtectPlan = personalProtectPlan;
+		this.personalProtectPlan = personalProtectPlan;
 	}
 	
 	

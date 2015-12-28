@@ -9,11 +9,11 @@ package plainObjects;
  */
 public class AccessoryInventory {
 	
-	private static String vendor;
-	private static String model;
-	private static String accessory;
-	private static long price;
-	private static long quantitiyAvailable;
+	private String vendor;
+	private String model;
+	private String accessory;
+	private long price;
+	private long quantitiyAvailable;
 	
 	//getters and setters
 	
@@ -21,32 +21,32 @@ public class AccessoryInventory {
 	public String getVendor() {
 		return vendor;
 	}
-	public static void setVendor(String vendor) {
-		AccessoryInventory.vendor = vendor;
+	public void setVendor(String vendor) {
+		this.vendor = vendor;
 	}
 	public String getModel() {
 		return model;
 	}
-	public static void setModel(String model) {
-		AccessoryInventory.model = model;
+	public void setModel(String model) {
+		this.model = model;
 	}
 	public String getAccessory() {
 		return accessory;
 	}
-	public static void setAccessory(String accessory) {
-		AccessoryInventory.accessory = accessory;
+	public void setAccessory(String accessory) {
+		this.accessory = accessory;
 	}
 	public Long getPrice() {
 		return price;
 	}
-	public static void setPrice(long price) {
-		AccessoryInventory.price = price;
+	public void setPrice(long price) {
+		this.price = price;
 	}
 	public long getQuantitiyAvailable() {
 		return quantitiyAvailable;
 	}
-	public static void setQuantitiyAvailable(long quantitiyAvailable) {
-		AccessoryInventory.quantitiyAvailable = quantitiyAvailable;
+	public void setQuantitiyAvailable(long quantitiyAvailable) {
+		this.quantitiyAvailable = quantitiyAvailable;
 	} 
 	
 	public String getKey()
