@@ -1,0 +1,61 @@
+customerName,region,vendor,model,variant,color,accessories,motorInsurance,personalProtectPlan
+Abby,Maharashtra,Tata,Nano,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Abel,Gujarat,Tata,Nano,Petrol,White,Power Door Locks,ICICI Lombard,Yes
+Ben,Goa,Tata,Nano,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Binu,Maharashtra,Tata,Nano,Petrol,Black,Music System: Power Door Locks: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Bahul,Gujarat,Tata,Nano,Petrol,Black,Music System: Power Door Locks: Floor Mat: Seat Cover,Bajaj Allianz,No
+Chandu,Madhya Pradesh,Tata,Nano,Petrol,Black,Music System: Power Door Locks: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Chinnu,Uttar Pradesh,Tata,Nano,Petrol,Black,Music System: Power Door Locks: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Devu,Maharashtra,Tata,Nano,Petrol,Gray,Music System: Power Door Locks: Floor Mat: Seat Cover,Bajaj Allianz,No
+Dhir,Gujarat,Tata,Nano,Petrol,Gray,Music System,ICICI Lombard,Yes
+Dron,Madhya Pradesh,Tata,Nano,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Devam,Punjab,Tata,Nano,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Dipak,Maharashtra,Tata,Bolt,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Ellu,Gujarat,Tata,Bolt,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Eman,Madhya Pradesh,Tata,Bolt,Petrol,White,,ICICI Lombard,Yes
+Emon,Goa,Tata,Bolt,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Ekram,Karnataka,Tata,Bolt,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Eeswar,Maharashtra,Tata,Bolt,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Fawaz,Gujarat,Tata,Bolt,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Faizan,Madhya Pradesh,Tata,Bolt,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Fannig,Goa,Tata,Bolt,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Giri,Karnataka,Tata,Bolt,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Gyan,Gujarat,Tata,Bolt,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Gagan,Madhya Pradesh,Tata,Bolt,Petrol,Gray,,ICICI Lombard,Yes
+Goldy,Goa,Tata,Bolt,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Haan,Karnataka,Tata,Bolt,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Hanu,Maharashtra,Tata,Indica,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Hari,Kerala,Tata,Indica,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Hena,Karnataka,Tata,Indica,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover: AC,Bajaj Allianz,No
+Hima,Gujarat,Tata,Indica,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Hira,Goa,Tata,Indica,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Hamir,Maharashtra,Tata,Indica,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Hasan,Madhya Pradesh,Tata,Indica,Petrol,Gray,,Bajaj Allianz,No
+Idai,Goa,Tata,Indica,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Iham,Karnataka,Tata,Indica,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Irma,Gujarat,Tata,Indica,Diesel,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Isha,Madhya Pradesh,Tata,Indica,Diesel,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Ibhya,Goa,Tata,Indica,Diesel,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Ihkas,Karnataka,Tata,Indica,Diesel,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Ikram,Gujarat,Tata,Indica,Diesel,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Indra,Madhya Pradesh,Tata,Indica,Diesel,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Irawat,Goa,Tata,Indica,Diesel,Black,Power Door Locks: Body Cover: Floor Mat,ICICI Lombard,Yes
+Jey,Maharashtra,Tata,Indica,Diesel,Gray,Music System: Power Door Locks: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Jit,Gujarat,Tata,Indica,Diesel,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Jeet,Madhya Pradesh,Tata,Indica,Diesel,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+John,Goa,Tata,Indica,Diesel,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Jabin,Karnataka,Maruti Suzuki,Ciaz,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Jabir,Maharashtra,Maruti Suzuki,Ciaz,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Jatin,Gujarat,Maruti Suzuki,Ciaz,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Jayan,Madhya Pradesh,Maruti Suzuki,Swift,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Kant,Goa,Maruti Suzuki,Swift,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Linu,Karnataka,Maruti Suzuki,Swift,Petrol,Gray,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover: AC: ABS,Bajaj Allianz,No
+Mala,Maharashtra,Maruti Suzuki,Swift,Diesel,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Mann,Gujarat,Maruti Suzuki,Swift,Diesel,White,Music System: Power Door Locks: AC: ABS,Bajaj Allianz,No
+Nanu,Madhya Pradesh,Maruti Suzuki,Swift,Diesel,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Naman,Goa,Maruti Suzuki,Swift,Diesel,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Omi,Karnataka,Maruti Suzuki,Swift,Diesel,Gray,Music System: Power Door Locks: AC: ABS,ICICI Lombard,Yes
+Omkar,Maharashtra,Maruti Suzuki,Swift,Diesel,Red,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Paul,Gujarat,Maruti Suzuki,Wagon R,Petrol,White,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,ICICI Lombard,Yes
+Setu,Madhya Pradesh,Maruti Suzuki,Wagon R,Petrol,Black,Music System: Power Door Locks: Body Cover: Floor Mat: Seat Cover,Bajaj Allianz,No
+Vidu,Goa,Maruti Suzuki,Wagon R,Petrol,Blue,Music System: Power Door Locks: AC: ABS,ICICI Lombard,Yes
