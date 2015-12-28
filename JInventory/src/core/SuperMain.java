@@ -17,12 +17,15 @@ public class SuperMain {
 //			e.printStackTrace();
 //		}
 
-//		MapBuilderUsingExecutor builder=new MapBuilderUsingExecutor();
-//		builder.getStarted();
+		MapBuilderUsingExecutor builder=new MapBuilderUsingExecutor();
+		builder.getStarted();
 		
-		InventoryImpl impl=new InventoryImpl();
-		impl.readAccessoryInventoryfromCSV();
-		
+//		InventoryImpl impl=new InventoryImpl();
+//		impl.readAccessoryInventoryfromCSV();
+//		impl.readCarInventoryFromCSV();
+//		impl.readCarStandingOrderFromCSV();
+//		impl.readTaxRateFromCSV();
+//		impl.readMotorInsuranceFromCSV();
 		
 		
 		
