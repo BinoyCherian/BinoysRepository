@@ -8,14 +8,15 @@ import core.InventoryImpl;
 import core.InventoryInterface;
 import plainObjects.MotorInsurance;
 
-public class CallableMI implements Callable<List<MotorInsurance>>{
+public class CallableMI implements Callable<List<MotorInsurance>> {
 
-	InventoryInterface loader=new InventoryImpl();
-	List<MotorInsurance> insuranceList=new ArrayList<>();
+	InventoryInterface loader = new InventoryImpl();
+	List<MotorInsurance> insuranceList = new ArrayList<>();
+
 	@Override
 	public List<MotorInsurance> call() throws Exception {
-		
-		insuranceList=loader.readMotorInsuranceFromCSV();
+
+		insuranceList = loader.readMotorInsuranceFromCSV();
 		return insuranceList;
 	}
 
