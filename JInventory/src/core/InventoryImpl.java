@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
 import exceptions.EmptyCellException;
 import exceptions.InsuranceCannotBeNull;
 import plainObjects.AccessoryInventory;
@@ -23,10 +25,12 @@ public class InventoryImpl implements InventoryInterface {
 	private static final String MODEL = "model";
 	private static final String VARIANT = "variant";
 	private static final String COLOR = "color";
+	Logger log;
 
 	@SuppressWarnings("static-access")
 	public Map<String, CarInventory> readCarInventoryFromCSV() {
 
+		log=Logger.getLogger(InventoryImpl.class);
 		CarInventory carInventory;
 		Map<String, CarInventory> carInventoryMap = new HashMap<>();
 
