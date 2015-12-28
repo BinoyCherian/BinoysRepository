@@ -20,12 +20,12 @@ public class SuperMain {
 		MapBuilderUsingExecutor builder=new MapBuilderUsingExecutor();
 		builder.getStarted();
 		
-//		InventoryImpl impl=new InventoryImpl();
-//		impl.readAccessoryInventoryfromCSV();
-//		impl.readCarInventoryFromCSV();
-//		impl.readCarStandingOrderFromCSV();
-//		impl.readTaxRateFromCSV();
-//		impl.readMotorInsuranceFromCSV();
+//			InventoryImpl impl=new InventoryImpl();
+////		System.out.println(impl.readAccessoryInventoryfromCSV());
+////		System.out.println(impl.readCarInventoryFromCSV());
+//			System.out.println(impl.readCarStandingOrderFromCSV());
+////		System.out.println(impl.readTaxRateFromCSV());
+////		System.out.println(impl.readMotorInsuranceFromCSV());
 		
 		
 		
