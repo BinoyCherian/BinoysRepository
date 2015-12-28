@@ -19,571 +19,567 @@ import plainObjects.TaxRate;
 
 public class InventoryImpl implements InventoryInterface {
 
-    private static final String VENDOR = "vendor";
-    private static final String MODEL = "model";
-    private static final String VARIANT = "variant";
-    private static final String COLOR = "color";
+	private static final String VENDOR = "vendor";
+	private static final String MODEL = "model";
+	private static final String VARIANT = "variant";
+	private static final String COLOR = "color";
 
-    @SuppressWarnings("static-access")
-    public Map<String, CarInventory> readCarInventoryFromCSV() {
+	@SuppressWarnings("static-access")
+	public Map<String, CarInventory> readCarInventoryFromCSV() {
 
-        CarInventory carInventory;
-        Map<String, CarInventory> carInventoryMap = new HashMap<>();
+		CarInventory carInventory;
+		Map<String, CarInventory> carInventoryMap = new HashMap<>();
 
-        String csvFile = "C:/Users/raaool/Music/csv/carInventory.csv";
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-        boolean firstLine = false;
+		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/carInventory.csv";
+		BufferedReader br = null;
+		String line = "";
+		String cvsSplitBy = ",";
+		boolean firstLine = false;
 
-        try {
-            br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
-                carInventory = new CarInventory();
-                String[] carDetails = line.split(cvsSplitBy);
+		try {
+			br = new BufferedReader(new FileReader(csvFile));
+			while ((line = br.readLine()) != null) {
+				carInventory = new CarInventory();
+				String[] carDetails = line.split(cvsSplitBy);
 
-                // handle vendor
+				// handle vendor
 
-                if (carDetails[0].equalsIgnoreCase(VENDOR))
-                    firstLine = true;
+				if (carDetails[0].equalsIgnoreCase(VENDOR))
+					firstLine = true;
 
-                else if (carDetails[0] == null) {
-                    throw new EmptyCellException(VENDOR);
-                } else {
-                    firstLine = false;
-                    carInventory.setVendor(carDetails[0]);
-                }
+				else if (carDetails[0] == null) {
+					throw new EmptyCellException(VENDOR);
+				} else {
+					firstLine = false;
+					carInventory.setVendor(carDetails[0]);
+				}
 
-                // handle model
+				// handle model
 
-                if (carDetails[1].equalsIgnoreCase(MODEL)) {
+				if (carDetails[1].equalsIgnoreCase(MODEL)) {
 
-                }
+				}
 
-                else if (carDetails[1] == null) {
-                    throw new EmptyCellException(MODEL);
-                } else {
-                    carInventory.setModel(carDetails[1]);
-                }
+				else if (carDetails[1] == null) {
+					throw new EmptyCellException(MODEL);
+				} else {
+					carInventory.setModel(carDetails[1]);
+				}
 
-                // handle variant
+				// handle variant
 
-                if (carDetails[2].equalsIgnoreCase(VARIANT)) {
+				if (carDetails[2].equalsIgnoreCase(VARIANT)) {
 
-                }
+				}
 
-                else if (carDetails[2] == null) {
-                    throw new EmptyCellException(VARIANT);
-                } else {
-                    carInventory.setVariant(carDetails[2]);
-                }
+				else if (carDetails[2] == null) {
+					throw new EmptyCellException(VARIANT);
+				} else {
+					carInventory.setVariant(carDetails[2]);
+				}
 
-                // handle color
+				// handle color
 
-                if (carDetails[3].equalsIgnoreCase(COLOR)) {
+				if (carDetails[3].equalsIgnoreCase(COLOR)) {
 
-                }
+				}
 
-                else if (carDetails[3] == null) {
-                    throw new EmptyCellException(COLOR);
-                } else {
-                    carInventory.setColor(carDetails[3]);
-                }
+				else if (carDetails[3] == null) {
+					throw new EmptyCellException(COLOR);
+				} else {
+					carInventory.setColor(carDetails[3]);
+				}
 
-                // handle base price
+				// handle base price
 
-                if (carDetails[4].equalsIgnoreCase("basePrice")) {
+				if (carDetails[4].equalsIgnoreCase("basePrice")) {
 
-                }
+				}
 
-                else if (carDetails[4] == null) {
-                    throw new EmptyCellException("basePrice");
-                } else {
-                    carInventory.setBasePrice(Long.parseLong(carDetails[4]));
-                }
+				else if (carDetails[4] == null) {
+					throw new EmptyCellException("basePrice");
+				} else {
+					carInventory.setBasePrice(Long.parseLong(carDetails[4]));
+				}
 
-                // handle quantity available
+				// handle quantity available
 
-                if (carDetails[5].equalsIgnoreCase("quantityAvailable")) {
+				if (carDetails[5].equalsIgnoreCase("quantityAvailable")) {
 
-                }
+				}
 
-                else if (carDetails[5] == null) {
-                    throw new EmptyCellException("quantityAvailable");
-                } else {
-                    carInventory.setQuantityAvailable(Integer.parseInt(carDetails[5]));
-                }
+				else if (carDetails[5] == null) {
+					throw new EmptyCellException("quantityAvailable");
+				} else {
+					carInventory.setQuantityAvailable(Integer.parseInt(carDetails[5]));
+				}
 
-                if ((carInventory.getKey() != null) && (!firstLine)) {
-                    System.out.println(carInventory);
-                    carInventoryMap.put(carInventory.getKey(), carInventory);
-                }
-            }
+				if ((carInventory.getKey() != null) && (!firstLine)) {
+					// System.out.println("-------------------------------------");
+					// System.out.println(carInventory);
+					carInventoryMap.put(carInventory.getKey(), carInventory);
+				}
+			}
 
-        } catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 
-            e.printStackTrace();
-        } catch (NumberFormatException e) {
+			e.printStackTrace();
+		} catch (NumberFormatException e) {
 
-            e.printStackTrace();
-        } catch (IOException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 
-            e.printStackTrace();
-        } catch (EmptyCellException e) {
+			e.printStackTrace();
+		} catch (EmptyCellException e) {
 
-            e.printStackTrace();
-        }
+			e.printStackTrace();
+		}
 
-        finally {
-            try {
-                if ((br != null) || (br == null))
-                    br.close();
-            } catch (IOException e) {
+		finally {
+			try {
 
-                e.printStackTrace();
-            }
-        }
-        return carInventoryMap;
+				System.out.println("Car Inventory Map Size: " + carInventoryMap.size());
+				if ((br != null) || (br == null))
+					br.close();
+			} catch (IOException e) {
 
-    }
+				e.printStackTrace();
+			}
+		}
+		return carInventoryMap;
 
-    @SuppressWarnings("static-access")
-    @Override
-    public Map<String, AccessoryInventory> readAccessoryInventoryfromCSV() {
-        String csvFile = "C:/Users/raaool/Music/csv/accessoryInventory.csv";
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-        AccessoryInventory accessoryObject;
-        Map<String, AccessoryInventory> accessoryMap = new HashMap<>();
-        boolean firstLine = false;
+	}
 
-        try {
+	@SuppressWarnings("static-access")
+	@Override
+	public Map<String, AccessoryInventory> readAccessoryInventoryfromCSV() {
+		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/accessoryInventory.csv";
+		BufferedReader br = null;
+		String line = "";
+		String cvsSplitBy = ",";
+		AccessoryInventory accessoryObject;
+		Map<String, AccessoryInventory> accessoryMap = new HashMap<>();
+		boolean firstLine = false;
 
-            br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
+		try {
 
-                accessoryObject = new AccessoryInventory();
+			br = new BufferedReader(new FileReader(csvFile));
+			while ((line = br.readLine()) != null) {
 
-                // use comma as separator
-                String[] accessories = line.split(cvsSplitBy);
+				accessoryObject = new AccessoryInventory();
 
-                // handle accessories
+				// use comma as separator
+				String[] accessories = line.split(cvsSplitBy);
 
-                if (accessories[0].equalsIgnoreCase(VENDOR)) {
-                    firstLine = true;
-                }
+				// handle accessories
 
-                else if (accessories[0] == null) {
-                    throw new EmptyCellException(VENDOR);
-                }
+				if (accessories[0].equalsIgnoreCase(VENDOR)) {
+					firstLine = true;
+				}
 
-                else {
-                    firstLine = false;
-                    accessoryObject.setVendor(accessories[0]);
+				else if (accessories[0] == null) {
+					throw new EmptyCellException(VENDOR);
+				}
 
-                }
+				else {
+					firstLine = false;
+					accessoryObject.setVendor(accessories[0]);
 
-                // handle model
+				}
 
-                if (accessories[1].equalsIgnoreCase(MODEL)) {
+				// handle model
 
-                }
+				if (accessories[1].equalsIgnoreCase(MODEL)) {
 
-                else if (accessories[1] == null) {
-                    throw new EmptyCellException(MODEL);
-                } else {
-                    accessoryObject.setModel(accessories[1]);
-                }
+				}
 
-                // handle accessories
+				else if (accessories[1] == null) {
+					throw new EmptyCellException(MODEL);
+				} else {
+					accessoryObject.setModel(accessories[1]);
+				}
 
-                if (accessories[2].equalsIgnoreCase("accessories")) {
+				// handle accessories
 
-                }
+				if (accessories[2].equalsIgnoreCase("accessories")) {
 
-                else if (accessories[2] == null) {
+				}
 
-                    throw new EmptyCellException("accessories");
-                } else {
-                    accessoryObject.setAccessory(accessories[2]);
-                }
+				else if (accessories[2] == null) {
 
-                // handle price
+					throw new EmptyCellException("accessories");
+				} else {
+					accessoryObject.setAccessory(accessories[2]);
+				}
 
-                if (accessories[3].equalsIgnoreCase("price")) {
+				// handle price
 
-                } else if (accessories[3] == null) {
+				if (accessories[3].equalsIgnoreCase("price")) {
 
-                    throw new EmptyCellException("price");
-                }
+				} else if (accessories[3] == null) {
 
-                else {
-                    accessoryObject.setPrice(Long.parseLong(accessories[3]));
-                }
+					throw new EmptyCellException("price");
+				}
 
-                // handle quantity available
+				else {
+					accessoryObject.setPrice(Long.parseLong(accessories[3]));
+				}
 
-                if (accessories[4].equalsIgnoreCase("quantityAvailable")) {
+				// handle quantity available
 
-                } else if (accessories[4] == null) {
+				if (accessories[4].equalsIgnoreCase("quantityAvailable")) {
 
-                    throw new EmptyCellException("quantityAvailable");
-                }
+				} else if (accessories[4] == null) {
 
-                else {
-                    accessoryObject.setQuantitiyAvailable(Long.parseLong(accessories[4]));
-                }
+					throw new EmptyCellException("quantityAvailable");
+				}
 
-                if ((accessoryObject.getKey() != null) && (!firstLine)) {
+				else {
+					accessoryObject.setQuantitiyAvailable(Long.parseLong(accessories[4]));
+				}
 
-                    System.out.println(accessoryObject);
-                    accessoryMap.put(accessoryObject.getKey(), accessoryObject);
+				if ((accessoryObject.getKey() != null) && (!firstLine)) {
 
-                } else {
-                    System.out.println("accessory object key issue");
-                }
+					// System.out.println(accessoryObject);
+					accessoryMap.put(accessoryObject.getKey(), accessoryObject);
 
-            }
-        } catch (IOException e) {
+				} else if (firstLine) {
+					System.out.println("Ignoring firstLine");
+				}
 
-            e.printStackTrace();
-        } catch (EmptyCellException e) {
+			}
+		} catch (IOException e) {
 
-            e.printStackTrace();
-        }
+			e.printStackTrace();
+		} catch (EmptyCellException e) {
 
-        finally {
-            try {
-                if ((br != null) || (br == null))
-                    br.close();
-            } catch (IOException e) {
+			e.printStackTrace();
+		}
 
-                e.printStackTrace();
-            }
-        }
+		finally {
+			try {
 
-        return accessoryMap;
-    }
+				System.out.println("Accessory Map Size: " + accessoryMap.size());
 
-    @SuppressWarnings("static-access")
-    @Override
-    public ArrayList<CarStandingOrder> readCarStandingOrderFromCSV() {
+				if ((br != null) || (br == null))
+					br.close();
+			} catch (IOException e) {
 
-        ArrayList<CarStandingOrder> orders = new ArrayList<>();
-        String csvFile = "C:/Users/raaool/Music/csv/carStandingOrders.csv";
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-        boolean firstLine = false;
-        CarStandingOrder orderObject = null;
+				e.printStackTrace();
+			}
+		}
 
-        try {
-            br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
-                orderObject = new CarStandingOrder();
+		return accessoryMap;
+	}
 
-                String[] ordersStringArray = line.split(cvsSplitBy);
+	@Override
+	public ArrayList<CarStandingOrder> readCarStandingOrderFromCSV() {
 
-                // handle customer name
+		ArrayList<CarStandingOrder> orders = new ArrayList<>();
+		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/carStandingOrders.csv";
+		BufferedReader br = null;
+		String line = "";
+		String cvsSplitBy = ",";
+		boolean firstLine = false;
+		CarStandingOrder orderObject = null;
 
-                if (ordersStringArray[0].equalsIgnoreCase("customerName")) {
-                    firstLine = true;
-                } else if (ordersStringArray[0] == null) {
-                    throw new EmptyCellException("customerName");
-                } else {
-                    orderObject.setCustomerName(ordersStringArray[0]);
-                }
+		try {
+			br = new BufferedReader(new FileReader(csvFile));
+			while ((line = br.readLine()) != null) {
+				orderObject = new CarStandingOrder();
 
-                // handle region
-                if (ordersStringArray[1].equalsIgnoreCase("region")) {
+				String[] ordersStringArray = line.split(cvsSplitBy);
 
-                } else if (ordersStringArray[1] == null) {
-                    throw new EmptyCellException("region");
-                } else {
-                    orderObject.setRegion(ordersStringArray[1]);
-                }
+				// handle customer name
 
-                // handle vendor
-                if (ordersStringArray[2].equalsIgnoreCase(VENDOR)) {
+				if (ordersStringArray[0].equalsIgnoreCase("customerName")) {
+					// System.out.println("firstline");
+					firstLine = true;
+				} else if (ordersStringArray[0] == null) {
+					throw new EmptyCellException("customerName");
+				} else {
+					firstLine = false;
+					orderObject.setCustomerName(ordersStringArray[0]);
+				}
 
-                } else if (ordersStringArray[2] == null) {
-                    throw new EmptyCellException(VENDOR);
-                } else {
-                    orderObject.setVendor(ordersStringArray[2]);
-                }
+				// handle region
+				if (ordersStringArray[1].equalsIgnoreCase("region")) {
 
-                // handle model
+				} else if (ordersStringArray[1] == null) {
+					throw new EmptyCellException("region");
+				} else {
+					orderObject.setRegion(ordersStringArray[1]);
+				}
 
-                if (ordersStringArray[3].equalsIgnoreCase(MODEL)) {
+				// handle vendor
+				if (ordersStringArray[2].equalsIgnoreCase(VENDOR)) {
 
-                } else if (ordersStringArray[3] == null) {
-                    throw new EmptyCellException(MODEL);
-                } else {
-                    orderObject.setModel(ordersStringArray[3]);
-                }
+				} else if (ordersStringArray[2] == null) {
+					throw new EmptyCellException(VENDOR);
+				} else {
+					orderObject.setVendor(ordersStringArray[2]);
+				}
 
-                // handle variant
-                if (ordersStringArray[4].equalsIgnoreCase(VARIANT)) {
+				// handle model
 
-                } else if (ordersStringArray[4] == null) {
-                    throw new EmptyCellException(VARIANT);
-                } else {
-                    orderObject.setVariant(ordersStringArray[4]);
-                }
+				if (ordersStringArray[3].equalsIgnoreCase(MODEL)) {
 
-                // handle color
-                if (ordersStringArray[5].equalsIgnoreCase(COLOR)) {
+				} else if (ordersStringArray[3] == null) {
+					throw new EmptyCellException(MODEL);
+				} else {
+					orderObject.setModel(ordersStringArray[3]);
+				}
 
-                } else if (ordersStringArray[5] == null) {
-                    throw new EmptyCellException(COLOR);
-                } else {
-                    orderObject.setColor(ordersStringArray[5]);
-                }
+				// handle variant
+				if (ordersStringArray[4].equalsIgnoreCase(VARIANT)) {
 
-                // handle accessories
-                ArrayList<String> accessories = new ArrayList<>();
+				} else if (ordersStringArray[4] == null) {
+					throw new EmptyCellException(VARIANT);
+				} else {
+					orderObject.setVariant(ordersStringArray[4]);
+				}
 
-                if (ordersStringArray[6].equalsIgnoreCase("accessories")) {
+				// handle color
+				if (ordersStringArray[5].equalsIgnoreCase(COLOR)) {
 
-                } else if (ordersStringArray[6] == null) {
-                    accessories.add(null);
+				} else if (ordersStringArray[5] == null) {
+					throw new EmptyCellException(COLOR);
+				} else {
+					orderObject.setColor(ordersStringArray[5]);
+				}
 
-                } else {
+				// handle accessories
+				ArrayList<String> accessories = new ArrayList<>();
 
-                    String[] accessoriesSplited = ordersStringArray[6].split(":");
+				if (ordersStringArray[6].equalsIgnoreCase("accessories")) {
 
-                    for (int count = 0; count < accessoriesSplited.length; count++) {
-                        accessories.add(accessoriesSplited[count]);
+				} else if (ordersStringArray[6] == null) {
+					accessories.add(null);
 
-                    }
+				} else {
 
-                }
-                orderObject.setAccessories(accessories);
+					String[] accessoriesSplited = ordersStringArray[6].split(":");
 
-                // handle motor insurance
+					for (int count = 0; count < accessoriesSplited.length; count++) {
+						accessories.add(accessoriesSplited[count]);
 
-                if (ordersStringArray[7].equalsIgnoreCase("motorInsurance")) {
+					}
 
-                } else if (ordersStringArray[7] == null)
+				}
 
-                {
-                    throw new InsuranceCannotBeNull("Insurance null");
-                } else {
-                    orderObject.setMotorInsurance(ordersStringArray[7]);
-                }
+				orderObject.setAccessories(accessories);
 
-                // handle personal protection plan
+				// handle motor insurance
 
-                if (ordersStringArray[8].equalsIgnoreCase("personalProtectPlan")) {
+				if (ordersStringArray[7].equalsIgnoreCase("motorInsurance")) {
 
-                } else if (ordersStringArray[8] == null)
+				} else if (ordersStringArray[7] == null)
 
-                {
-                    throw new EmptyCellException("Insurance null");
-                } else {
-                    orderObject.setPersonalProtectPlan(ordersStringArray[8]);
-                }
+				{
+					throw new InsuranceCannotBeNull("Insurance null");
+				} else {
+					orderObject.setMotorInsurance(ordersStringArray[7]);
+				}
 
-                if ((orderObject.getKey() != null) && (!firstLine)) {
-                    orders.add(orderObject);
-                }
+				// handle personal protection plan
 
-            }
+				if (ordersStringArray[8].equalsIgnoreCase("personalProtectPlan")) {
 
-        } catch (FileNotFoundException e) {
+				} else if (ordersStringArray[8] == null)
 
-            e.printStackTrace();
-        } catch (IOException e) {
+				{
+					throw new EmptyCellException("Insurance null");
+				} else {
+					orderObject.setPersonalProtectPlan(ordersStringArray[8]);
+				}
 
-            e.printStackTrace();
-        } catch (EmptyCellException e) {
+				// System.out.println(orderObject);
 
-            e.printStackTrace();
-        } catch (InsuranceCannotBeNull e) {
+				if ((orderObject.getKey() != null) && (!firstLine)) {
+					// System.out.println("--------------------------\n"+orderObject);
+					orders.add(orderObject);
+				}
 
-            e.printStackTrace();
-        }
+			}
 
-        finally {
-            try {
-                if ((br != null) || (br == null))
-                    br.close();
-            } catch (IOException e) {
+		} catch (FileNotFoundException e) {
 
-                e.printStackTrace();
-            }
-        }
+			e.printStackTrace();
+		} catch (IOException e) {
 
-        return orders;
-    }
+			e.printStackTrace();
+		} catch (EmptyCellException e) {
 
-    @Override
-    public List<MotorInsurance> readMotorInsuranceFromCSV() {
+			e.printStackTrace();
+		} catch (InsuranceCannotBeNull e) {
 
-        ArrayList<MotorInsurance> motorInsurance = new ArrayList<>();
-        String csvFile = "C:/Users/raaool/Music/csv/motorInsurance.csv";
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-        boolean firstLine = false;
-        MotorInsurance insuranceObject = null;
+			e.printStackTrace();
+		}
 
-        try {
-            br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
+		finally {
+			try {
+				System.out.println("Car Standing Orders Size: " + orders.size());
+				if ((br != null) || (br == null))
+					br.close();
+			} catch (IOException e) {
 
-                insuranceObject = new MotorInsurance();
-                String[] insuranceLine = line.split(cvsSplitBy);
+				e.printStackTrace();
+			}
+		}
 
-                // motorInsurance
+		return orders;
+	}
 
-                if ("motorInsuranceProvider".equalsIgnoreCase(insuranceLine[0])) {
-                    firstLine = true;
-                    // logg
-                } else if (insuranceLine[0] == null) {
-                    throw new EmptyCellException("motorInsurance");
-                } else {
-                    firstLine=false;
-                    insuranceObject.setMotorInsuranceName(insuranceLine[0]);
-                }
-
-                // personalProtectPlanOffered
-                if ("personalProtectPlanOffered".equalsIgnoreCase(insuranceLine[1])) {
-
-                } else if (insuranceLine[1] == null) {
-
-                    throw new EmptyCellException("personalProtectPlanOffered");
-                }
-                else
-                {
-                    insuranceObject.setPersonalProtectPlan(insuranceLine[1]);
-                }
-                
-                //firstYearPremium
-                
-                if("firstYearPremium".equalsIgnoreCase(insuranceLine[2]))
-                {
-                    
-                }else if(insuranceLine[2]==null)
-                {
-                    throw new EmptyCellException("firstYearPremium");
-                }
-                else{
-                    insuranceObject.setFirstYearPremium(insuranceLine[2]);
-                }
-                
-                System.out.println(insuranceObject);
-                
-                
-                if((insuranceObject!=null) &&(!firstLine)){
-                    
-                    motorInsurance.add(insuranceObject);
-                }
-               
-                
-
-            }
-        } catch (FileNotFoundException e) {
-
-            e.printStackTrace();
-        } catch (IOException e) {
-
-            e.printStackTrace();
-        } catch (EmptyCellException e) {
-
-            e.printStackTrace();
-        }
-
-        finally {
-            if ((br == null) || (br != null)) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        return motorInsurance;
-    }
-
-   
-    @Override
-    public List<TaxRate> readTaxRateFromCSV() {
-        
-        ArrayList<TaxRate> taxRateList=new ArrayList<>();
-        String csvFile = "C:/Users/raaool/Music/csv/regionalTaxConfiguration.csv";
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-        boolean firstLine = false;
-        TaxRate rate=null;
-        
-        try {
-            
-            br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
-            
-                rate=new TaxRate();
-            String[] taxArray=line.split(",");    
-            
-            if(taxArray[0].equalsIgnoreCase("state"))
-            {
-                firstLine=true;
-            }
-            else if(taxArray[0]==null)
-            {
-                throw new EmptyCellException("state");
-            }
-            else
-            {
-                firstLine=false;
-                rate.setState(taxArray[0]);
-            }
-            
-            
-            //handle percent
-            if(taxArray[1].equalsIgnoreCase("taxRate"))
-            {
-                
-            }
-            else if(taxArray[1]==null)
-            {
-                throw new EmptyCellException("taxRate");
-            }
-            else
-            {
-                rate.setTaxRate(Long.parseLong(taxArray[1]));
-            }
-            
-            
-            
-            if((rate!=null)&&(!firstLine))
-            {
-                taxRateList.add(rate);
-            }
-            
-                
-            }
-        } catch (FileNotFoundException e) {
-            
-            e.printStackTrace();
-        } catch (IOException e) {
-           
-            e.printStackTrace();
-        } catch (EmptyCellException e) {
-            
-            e.printStackTrace();
-        }
-       
-        
-        
-        return taxRateList;
-    }
+	@Override
+	public List<MotorInsurance> readMotorInsuranceFromCSV() {
 
+		ArrayList<MotorInsurance> motorInsurance = new ArrayList<>();
+		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/motorInsurance.csv";
+		BufferedReader br = null;
+		String line = "";
+		String cvsSplitBy = ",";
+		boolean firstLine = false;
+		MotorInsurance insuranceObject = null;
 
+		try {
+			br = new BufferedReader(new FileReader(csvFile));
+			while ((line = br.readLine()) != null) {
 
+				insuranceObject = new MotorInsurance();
+				String[] insuranceLine = line.split(cvsSplitBy);
+
+				// motorInsurance
+
+				if ("motorInsuranceProvider".equalsIgnoreCase(insuranceLine[0])) {
+					firstLine = true;
+					// logg
+				} else if (insuranceLine[0] == null) {
+					throw new EmptyCellException("motorInsurance");
+				} else {
+					firstLine = false;
+					insuranceObject.setMotorInsuranceName(insuranceLine[0]);
+				}
+
+				// personalProtectPlanOffered
+				if ("personalProtectPlanOffered".equalsIgnoreCase(insuranceLine[1])) {
+
+				} else if (insuranceLine[1] == null) {
+
+					throw new EmptyCellException("personalProtectPlanOffered");
+				} else {
+					insuranceObject.setPersonalProtectPlan(insuranceLine[1]);
+				}
+
+				// firstYearPremium
+
+				if ("firstYearPremium".equalsIgnoreCase(insuranceLine[2])) {
+
+				} else if (insuranceLine[2] == null) {
+					throw new EmptyCellException("firstYearPremium");
+				} else {
+					insuranceObject.setFirstYearPremium(insuranceLine[2]);
+				}
+
+				if ((insuranceObject != null) && (!firstLine)) {
+					// System.out.println("----------------------------\n"+insuranceObject);
+					motorInsurance.add(insuranceObject);
+				}
+
+			}
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		} catch (EmptyCellException e) {
+
+			e.printStackTrace();
+		}
+
+		finally {
+			System.out.println("Motor Insurance Map Size: " + motorInsurance.size());
+			if ((br == null) || (br != null)) {
+				try {
+					br.close();
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return motorInsurance;
+	}
+
+	@Override
+	public List<TaxRate> readTaxRateFromCSV() {
+
+		ArrayList<TaxRate> taxRateList = new ArrayList<>();
+		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/regionalTaxConfiguration.csv";
+		BufferedReader br = null;
+		String line = "";
+		String cvsSplitBy = ",";
+		boolean firstLine = false;
+		TaxRate rate = null;
+
+		try {
+
+			br = new BufferedReader(new FileReader(csvFile));
+			while ((line = br.readLine()) != null) {
+
+				rate = new TaxRate();
+				String[] taxArray = line.split(cvsSplitBy);
+
+				if (taxArray[0].equalsIgnoreCase("state")) {
+					firstLine = true;
+				} else if (taxArray[0] == null) {
+					throw new EmptyCellException("state");
+				} else {
+					firstLine = false;
+					rate.setState(taxArray[0]);
+				}
+
+				// handle percent
+				if (taxArray[1].equalsIgnoreCase("taxRate")) {
+
+				} else if (taxArray[1] == null) {
+					throw new EmptyCellException("taxRate");
+				} else {
+					rate.setTaxRate(Long.parseLong(taxArray[1]));
+				}
+
+				if ((rate != null) && (!firstLine)) {
+					// System.out.println("--------\n"+rate);
+					taxRateList.add(rate);
+				}
+
+			}
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		} catch (EmptyCellException e) {
+
+			e.printStackTrace();
+		}
+
+		finally {
+
+			System.out.println("Tax Rate Map Size: " + taxRateList.size());
+			if ((br == null) || (br != null)) {
+				try {
+					br.close();
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return taxRateList;
+	}
 
 }
