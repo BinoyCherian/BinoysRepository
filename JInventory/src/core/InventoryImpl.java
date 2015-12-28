@@ -27,7 +27,7 @@ public class InventoryImpl implements InventoryInterface {
 	private static final String COLOR = "color";
 	Logger log;
 
-	@SuppressWarnings("static-access")
+	
 	public Map<String, CarInventory> readCarInventoryFromCSV() {
 
 		log=Logger.getLogger(InventoryImpl.class);
@@ -277,9 +277,9 @@ public class InventoryImpl implements InventoryInterface {
 	}
 
 	@Override
-	public ArrayList<CarStandingOrder> readCarStandingOrderFromCSV() {
+	public List<CarStandingOrder> readCarStandingOrderFromCSV() {
 
-		ArrayList<CarStandingOrder> orders = new ArrayList<>();
+		List<CarStandingOrder> orders = null;
 		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/carStandingOrders.csv";
 		BufferedReader br = null;
 		String line = "";
@@ -287,9 +287,15 @@ public class InventoryImpl implements InventoryInterface {
 		boolean firstLine = false;
 		CarStandingOrder orderObject = null;
 
+		
 		try {
+			
+			orders=new ArrayList<>();
 			br = new BufferedReader(new FileReader(csvFile));
+			
 			while ((line = br.readLine()) != null) {
+				
+				
 				orderObject = new CarStandingOrder();
 
 				String[] ordersStringArray = line.split(cvsSplitBy);
@@ -397,16 +403,23 @@ public class InventoryImpl implements InventoryInterface {
 					orderObject.setPersonalProtectPlan(ordersStringArray[8]);
 				}
 
-				// System.out.println(orderObject);
-
-				if ((orderObject.getKey() != null) && (!firstLine)) {
-					// System.out.println("--------------------------\n"+orderObject);
-					orders.add(orderObject);
-				}
+//				 System.out.println(orderObject);
+				
+//				System.out.println(orderObject);
+				if((!firstLine)&&(orderObject.getKey()!=null))
+				orders.add(orderObject);
+				
+//				System.out.println(orders);
 
 			}
+			
+			
+			
+//			System.out.println(orders);
 
-		} catch (FileNotFoundException e) {
+		} 
+		
+		catch (FileNotFoundException e) {
 
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -423,6 +436,8 @@ public class InventoryImpl implements InventoryInterface {
 		finally {
 			try {
 //				System.out.println("Car Standing Orders Size: " + orders.size());
+//				System.out.println(orders);
+				
 				if ((br != null) || (br == null))
 					br.close();
 			} catch (IOException e) {
