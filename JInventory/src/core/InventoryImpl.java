@@ -371,6 +371,14 @@ public class InventoryImpl implements InventoryInterface {
 					String[] accessoriesSplited = ordersStringArray[6].split(":");
 
 					for (int count = 0; count < accessoriesSplited.length; count++) {
+						
+						if(accessoriesSplited[count].startsWith(" "))
+						{
+							String newString=accessoriesSplited[count].replaceFirst(" ", "");
+//							System.out.println(newString);
+							accessories.add(newString);
+						}
+						else
 						accessories.add(accessoriesSplited[count]);
 
 					}
