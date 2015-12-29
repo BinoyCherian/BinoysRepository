@@ -36,14 +36,15 @@ public class InventoryImpl implements InventoryInterface {
 		CarInventory carInventory;
 		Map<String, CarInventory> carInventoryMap = new HashMap<>();
 
-		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/carInventory.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
 		boolean firstLine = false;
 
 		try {
-			br = new BufferedReader(new FileReader(csvFile));
+			
+			URL urlFile=getClass().getClassLoader().getResource("resource/carInventory.csv");
+			br = new BufferedReader(new FileReader(urlFile.getPath()));
 			while ((line = br.readLine()) != null) {
 				carInventory = new CarInventory();
 				String[] carDetails = line.split(cvsSplitBy);
@@ -156,10 +157,9 @@ public class InventoryImpl implements InventoryInterface {
 
 	}
 
-	@SuppressWarnings("static-access")
 	@Override
 	public Map<String, AccessoryInventory> readAccessoryInventoryfromCSV() {
-		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/accessoryInventory.csv";
+		
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -168,8 +168,8 @@ public class InventoryImpl implements InventoryInterface {
 		boolean firstLine = false;
 
 		try {
-
-			br = new BufferedReader(new FileReader(csvFile));
+			URL urlFile=getClass().getClassLoader().getResource("resource/accessoryInventory.csv");
+			br = new BufferedReader(new FileReader(urlFile.getPath()));
 			while ((line = br.readLine()) != null) {
 
 				accessoryObject = new AccessoryInventory();
@@ -282,7 +282,6 @@ public class InventoryImpl implements InventoryInterface {
 	public List<CarStandingOrder> readCarStandingOrderFromCSV() {
 
 		List<CarStandingOrder> orders = null;
-		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/carStandingOrders.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -290,8 +289,7 @@ public class InventoryImpl implements InventoryInterface {
 		CarStandingOrder orderObject = null;
 		
 		URL urlFile=getClass().getClassLoader().getResource("resource/carStandingOrders.csv");
-		System.out.println("URL: "+urlFile.getPath());
-		
+			
 		
 		try {
 			File file=new File(urlFile.getPath());
@@ -466,7 +464,7 @@ public class InventoryImpl implements InventoryInterface {
 	public List<MotorInsurance> readMotorInsuranceFromCSV() {
 
 		ArrayList<MotorInsurance> motorInsurance = new ArrayList<>();
-		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/motorInsurance.csv";
+		
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -474,7 +472,9 @@ public class InventoryImpl implements InventoryInterface {
 		MotorInsurance insuranceObject = null;
 
 		try {
-			br = new BufferedReader(new FileReader(csvFile));
+			
+			URL urlFile=getClass().getClassLoader().getResource("resource/motorInsurance.csv");
+			br = new BufferedReader(new FileReader(urlFile.getPath()));
 			while ((line = br.readLine()) != null) {
 
 				insuranceObject = new MotorInsurance();
@@ -548,7 +548,7 @@ public class InventoryImpl implements InventoryInterface {
 	public List<TaxRate> readTaxRateFromCSV() {
 
 		ArrayList<TaxRate> taxRateList = new ArrayList<>();
-		String csvFile = "C:/Users/binoy.j.cherian/Music/csv/regionalTaxConfiguration.csv";
+		
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -557,7 +557,8 @@ public class InventoryImpl implements InventoryInterface {
 
 		try {
 
-			br = new BufferedReader(new FileReader(csvFile));
+			URL urlFile=getClass().getClassLoader().getResource("resource/regionalTaxConfiguration.csv");
+			br = new BufferedReader(new FileReader(urlFile.getPath()));
 			while ((line = br.readLine()) != null) {
 
 				rate = new TaxRate();
