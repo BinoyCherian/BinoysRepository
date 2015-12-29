@@ -1,0 +1,25 @@
+vendor,model,variant,color,basePrice,quantityAvailable
+Tata,Nano,Petrol,White,150000,15
+Tata,Nano,Petrol,Black,140000,20
+Tata,Nano,Petrol,Gray,145000,0
+Tata,Bolt,Petrol,White,330000,12
+Tata,Bolt,Petrol,Black,330000,68
+Tata,Bolt,Petrol,Gray,330000,15
+Tata,Indica,Petrol,White,390000,12
+Tata,Indica,Petrol,Black,390000,14
+Tata,Indica,Petrol,Gray,390000,16
+Tata,Indica,Diesel,White,390000,17
+Tata,Indica,Diesel,Black,390000,18
+Tata,Indica,Diesel,Gray,390000,19
+Maruti Suzuki,Ciaz,Petrol,White,520000,12
+Maruti Suzuki,Ciaz,Petrol,Black,520000,1
+Maruti Suzuki,Ciaz,Petrol,Gray,520000,13
+Maruti Suzuki,Swift,Petrol,White,670000,10
+Maruti Suzuki,Swift,Petrol,Black,670000,20
+Maruti Suzuki,Swift,Petrol,Gray,670000,15
+Maruti Suzuki,Swift,Diesel,White,670000,16
+Maruti Suzuki,Swift,Diesel,Black,670000,19
+Maruti Suzuki,Swift,Diesel,Gray,670000,18
+Maruti Suzuki,Wagon R,Petrol,White,480000,17
+Maruti Suzuki,Wagon R,Petrol,Black,480000,12
+Maruti Suzuki,Wagon R,Petrol,Gray,480000,13
